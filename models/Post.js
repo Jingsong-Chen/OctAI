@@ -10,12 +10,10 @@ const PostSchema = new Schema({
         type: String,
         required: true,
     },
-    // this is post name
     name: {
         type: String,
     },
     avatar: {
-        // this is user name
         type: String,
     },
     likes: [
