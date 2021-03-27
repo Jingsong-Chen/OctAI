@@ -13,13 +13,14 @@ connectDB();
 // middleware mounted without a path will be executed for every request to the app
 // parses incoming requests with JSON payloads
 // app.use(express.json({extended: false}));
-app.use(express.json());
+app.use(express.json({limit: '16mb'}));
 
 // define routes
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
+app.use('/api/music', require('./routes/api/music'));
 
 // each GET request is specified with a route and a handler
 // (arg1, ...) => return is like python's lambda functions
