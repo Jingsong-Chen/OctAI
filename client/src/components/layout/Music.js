@@ -29,7 +29,7 @@ const Music = ({getSerial, music}) => {
     
     return (
         <Fragment>
-            <h1 className="large text-primary">Get Music</h1>
+            <h1 className="large text-primary">Get File</h1>
             <p className="lead">Enter the serial number:</p>
             <form className="form" onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
@@ -46,7 +46,7 @@ const Music = ({getSerial, music}) => {
             </form>
             <br/>
             {music.loading ? <Fragment></Fragment> : 
-            music.music === null ? <Fragment>no music</Fragment> :  
+            music.music === null ? <Fragment>File not exist</Fragment> :  
             <Fragment>{JSON.stringify(music.music)}</Fragment>}
             <p id='spinner'></p>
             <p id='music-box'></p>
